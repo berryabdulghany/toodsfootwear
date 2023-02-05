@@ -1,0 +1,248 @@
+*{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #F5F5F5;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+//container
+.container{
+    max-width: 1200px;
+    margin: auto;
+    width: 90%;
+    
+}
+
+.d-flex{
+    display: flex;
+}
+
+.f-wrap{
+    flex-wrap: wrap;
+}
+
+.img-responsive{
+    width: 100%;
+}
+
+.jc-spacebetween{
+    justify-content: space-between;
+}
+
+.ai-center{
+    align-items: center;
+}
+
+.spacersection{
+    padding: 2% 0;
+}
+
+//buat title promo
+.spacercontent{
+    margin-bottom: 20px;
+}
+
+.bigtitle{
+    font-size: 2em;
+}
+
+//button
+.bigbtn{
+    padding: 20px 40px;
+    background: black;
+    color: bisque;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+
+//header
+.header{
+    .nav{
+        &-brand{
+            h1{
+                a{
+                    text-decoration: none;
+                    color: black;
+                    &:hover{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        &-menu{
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                li{
+                    a{
+                        display: block;
+                        padding: 10px;
+                        text-decoration: none;
+                        color: black;
+                        &:hover{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+.headcontent{
+    color: #fff;
+}
+
+//hero
+.hero{
+    &-desc{
+        width: 40%;
+        width: auto;
+        //content buat bigtitle
+        p{
+            font-size: 14px;
+            line-height: 180%;
+        }
+    }
+    &-image{
+        width: 100%;
+        align-items: center;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    }
+}
+
+//category
+.category{
+    &-item{
+        height: 380px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+        .overlay{
+            opacity: 0;
+            z-index: 5;
+            position: absolute;
+            padding: 20px;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(115, 71, 40, 0.72);
+            color: white;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+            .btn-outline{
+                text-decoration: none;
+                padding: 15px ;
+                background: none;
+                color: white;
+                display: inline-block;
+                border: 2px solid #fff;
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+        }
+        &:hover .overlay{
+            opacity: 1;
+            // filter: blur(8px);
+        }
+
+        img{
+            filter: blur(0px);
+            transition:cubic-bezier(0.215, 0.610, 0.355, 1) 3s;
+        }
+
+        &:hover{
+            img{
+                filter: blur(5px);
+            }
+        }
+    }
+}
+
+//shopping
+.shopping{
+    &-item{
+        width: 18%;
+        .zoom {
+            padding: 12px;
+            background-color: none;
+            transition: transform .2s; /* Animation */
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+          }
+          
+          .zoom:hover {
+            transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+          }
+
+        h3{
+            margin-bottom: 5px;
+        }
+
+        h4{
+            margin-bottom: 10px;
+
+        }
+        a{
+            display: block;
+            letter-spacing: 2px;
+            font-size: 18px;
+            padding: 2px;
+            text-decoration: none;
+            color: black;
+            &:hover{
+                font-weight: bold;
+            }
+        }
+
+    }
+
+}
+
+
+//Button Scrol Up
+.scrolltop{
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    padding: 10px 15px;
+    background-color: #141517;
+    color: #fff;
+    border-radius: 5px;
+    border-radius: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+.scrolltop:hover{
+  background-color: #f7f7f7;
+  color: #000;
+}
+
+//footer
